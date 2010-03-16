@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true" namespace="OrmSpikes.Domain" assembly="OrmSpikes">
+  <class name="Service" table="Services">
+    <id name="Id" type="int">
+      <column name="Id"></column>
+      <generator class="identity"></generator>
+    </id>
+    <property name="Name" type="string"></property>
+    <property name="MonthlyFee" type="decimal"></property>
+    <many-to-one name="BoughtBy" class="Customer" column="BoughtByCustomerId"></many-to-one>
+  </class>
+</hibernate-mapping>

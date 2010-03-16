@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true">
+  <class name="OrmSpikes.Domain.PaymentMethod, OrmSpikes" table="PaymentMethods" abstract="true">
+    <id type="int" name="Id">
+      <column name="id"></column>
+      <generator class="identity"></generator>
+    </id>
+    <discriminator column="Name" type="string"></discriminator>
+    <property name="Status" type="byte"></property>
+    <property name="RegistrationDate" type="DateTime"></property>
+    <many-to-one name="AssignedTo" column="assignedToCustomerId" class="OrmSpikes.Domain.Customer, OrmSpikes" unique="true"></many-to-one>
+    <subclass name="OrmSpikes.Domain.CreditCardPaymentMethod, OrmSpikes" discriminator-value="Credit Card">
+      <property name="CardNumber" type="string"></property>
+      <property name="CardHolderName" type="string"></property>
+      <property name="CardType" type="string"></property>
+    </subclass>
+    <subclass name="OrmSpikes.Domain.DirectDebitPaymentMethod, OrmSpikes" discriminator-value="Direct Debit">
+      <property name="BankAccountNumber" type="string"></property>
+      <property name="HolderName" type="string"></property>
+    </subclass>
+  </class>
+</hibernate-mapping>

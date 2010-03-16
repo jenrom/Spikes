@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="true" namespace="OrmSpikes.Domain" assembly="OrmSpikes">
+  <class name="Address" table="Adressses">
+    <id name="Id" type="int">
+      <column name="Id"></column>
+      <generator class="identity"></generator>
+    </id>
+    <property name="Street" type="string"></property>
+    <many-to-one unique="true" column="contactId" not-null="true"  cascade="save-update" class="Contact" name="Contact"></many-to-one>
+  </class>
+</hibernate-mapping>
