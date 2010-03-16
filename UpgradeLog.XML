@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AspNetMvc">
+</Property><Property Name="Solution File" Value="C:\Users\Roman\Projects\Spikes\AspNetMvc.sln">
+</Property><Property Name="Date" Value="16 marca 2010">
+</Property><Property Name="Time" Value="22:12:48">
+</Property></Properties><Event ErrorLevel="0" Project="System.Web.Mvc" Source="ExternalSrc\SystemWebMvc\System.Web.Mvc.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="System.Web.Mvc" Source="ExternalSrc\SystemWebMvc\System.Web.Mvc.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="System.Web.Mvc" Source="ExternalSrc\SystemWebMvc\System.Web.Mvc.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
